@@ -26,7 +26,7 @@ export const Metrics = ({
 
   const namespace = resource?.metadata?.namespace || "";
   const applicationName = application?.metadata?.name || "";
-  const applicationNamespace = application?.metadata?.namespace || "";
+  const applicationNamespace = application?.spec?.destination?.namespace || "";
   const project = application?.spec?.project || "";
   const uid = application?.metadata?.uid || "";
 
